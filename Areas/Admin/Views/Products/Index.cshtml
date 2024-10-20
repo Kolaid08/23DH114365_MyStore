@@ -7,16 +7,13 @@
 
 <h2 class="bg-success">Danh sách sản phẩm</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table bg-info col-lg-12 col-md-6 col-sm-3">
+<table class="table table-info container-fluid">
     <tr>
-        <th class="bg-success">Tên sản phẩm</th>
-        <th class="bg-success">Hình ảnh</th>
-        <th class="bg-success">Đơn giá</th>
-        <th class="bg-success">Danh mục</th>
-        <th class="bg-success"></th>
+        <th class="bg-success col-md-2">Tên sản phẩm</th>
+        <th class="bg-success col-md-2">Hình ảnh</th>
+        <th class="bg-success col-md-1">Đơn giá</th>
+        <th class="bg-success col-md-2">Danh mục</th>
+        <th class="bg-success col-md-4"></th>
     </tr>
 
     @foreach (var item in Model)
