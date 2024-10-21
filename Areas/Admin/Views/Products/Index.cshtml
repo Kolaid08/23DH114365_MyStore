@@ -1,37 +1,86 @@
-﻿@model IEnumerable<_23DH114365_MyStore.Models.Product>
+﻿@model _23DH114365_MyStore.Models.ViewModel.ProductSearchMV
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Search Product";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2 class="bg-success">Danh sách sản phẩm</h2>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"  />
+        <title> Search </title>
+        <style>
+            .search-container, .order-container {
+                padding-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- From tìm kiếm -->
+        @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+            {
+                <div class="form-group search-container">
+                    @Html.TextBoxFor(m => m.SearchTerm, new
+                    {
+                        @class = "form-control",
+                         placeholer = "nhập tên, mô tả hoặc chủng loại sản phẩm"
+                    })
+                    @Html.TextAreaFor(m => m.MinPrice, new
+                    {
+                        @class = "form-control",
+                        placeholer = "nhập giá tối thiểu",
+                        tpye = "number"
+                    })
+                    @Html.TextAreaFor(m => m.MaxPrice, new
+                    {
+                        @class = "form-control",
+                        placeholer = "nhập giá tối đa",
+                        tpye = "number"
+                    })
+                    <button type="submit" class="btn btn-primary"> Tìm Kiếm </button>
+                </div>
+            }
+    <div class="form-group search-container">
+        Sắp xếp theo:
+        @Html.ActionLink("tên tăng dần", "Index", "Products",
+            new
+            {
+                sortOrder = "name_asc",
+                searchTerm = Model.SearchTerm,
+                minPrice = Model.MinPrice,
+                maxPrice = Model.MaxPrice
+            }, null) |
+        @Html.ActionLink("tên giảm dần", "Index", "Products",
+            new
+            {
+                sortOrder = "name_desc",
+                searchTerm = Model.SearchTerm,
+                minPrice = Model.MinPrice,
+                maxPrice = Model.MaxPrice
+            }, null) |
+        @Html.ActionLink("giá tăng dần", "Index", "Products",
+            new
+                {
+                sortOrder = "price_asc",
+                searchTerm = Model.SearchTerm,
+                minPrice = Model.MinPrice,
+                maxPrice = Model.MaxPrice
+            }, null) |
+        @Html.ActionLink("giá giảm dần", "Index", "Products",
+            new
+            {
+                sortOrder = "name_desc",
+                searchTerm = Model.SearchTerm,
+                minPrice = Model.MinPrice,
+                maxPrice = Model.MaxPrice
+            }, null) |
+    </div>
 
-<table class="table table-info container-fluid">
-    <tr>
-        <th class="bg-success col-md-2">Tên sản phẩm</th>
-        <th class="bg-success col-md-2">Hình ảnh</th>
-        <th class="bg-success col-md-1">Đơn giá</th>
-        <th class="bg-success col-md-2">Danh mục</th>
-        <th class="bg-success col-md-4"></th>
-    </tr>
+        @* Form kết quả tìm kiếm *@
+        @Html.Partial("PVListProduct", Model)
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
-            <td>@Html.DisplayFor(modelItem => item.ProductImage)</td>
-            <td>@Html.DisplayFor(modelItem => item.ProductPrice)</td>
-            <td>@Html.DisplayFor(modelItem => item.Category.CategoryName)</td>
-            <td>
-                @Html.ActionLink("cập nhật", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
-                @Html.ActionLink("chi tiết", "Details", new { id = item.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
-                @Html.ActionLink("xóa", "Delete", new { id = item.ProductID }, new { @class = "btn btn-primary btn-sm" })
-            </td>
-        </tr>
-    }
-
-</table>
-<p>
-    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
-</p>
+</body>
+</html>
