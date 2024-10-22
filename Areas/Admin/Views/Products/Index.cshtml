@@ -28,13 +28,13 @@
                         @class = "form-control",
                          placeholer = "nhập tên, mô tả hoặc chủng loại sản phẩm"
                     })
-                    @Html.TextAreaFor(m => m.MinPrice, new
+                    @Html.TextBoxFor(m => m.MinPrice, new
                     {
                         @class = "form-control",
                         placeholer = "nhập giá tối thiểu",
                         tpye = "number"
                     })
-                    @Html.TextAreaFor(m => m.MaxPrice, new
+                    @Html.TextBoxFor(m => m.MaxPrice, new
                     {
                         @class = "form-control",
                         placeholer = "nhập giá tối đa",
