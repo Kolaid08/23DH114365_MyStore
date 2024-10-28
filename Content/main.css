@@ -1,0 +1,148 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+
+    header .logo h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    header .header-links {
+        text-align: right;
+    }
+
+        header .header-links p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        header .header-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            header .header-links ul li {
+                display: inline;
+                margin-left: 15px;
+                font-size: 14px;
+            }
+
+nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+    .hero img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .hero .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+/* Featured Categories */
+.featured {
+    padding: 20px;
+}
+
+    .featured h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .featured .product {
+        display: inline-block;
+        width: 18%;
+        text-align: center;
+        margin: 10px;
+    }
+
+        .featured .product img {
+            width: 100%;
+        }
+
+        .featured .product h3 {
+            font-size: 14px;
+            margin: 5px 0;
+        } 
+
+.new-arrivals {
+    padding: 20px;
+}
+
+    .new-arrivals h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .new-arrivals .product {
+        display: inline-block;
+        width: 18%;
+        text-align: center;
+        margin: 10px;
+    }
+
+        .new-arrivals .product img {
+            width: 100%;
+        }
+
+        .new-arrivals .product h3 {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: red;
+}

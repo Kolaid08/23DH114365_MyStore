@@ -179,6 +179,7 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MyStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\HomeProductVM.cs" />
     <Compile Include="Models\ViewModel\ProductSearchMV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -199,6 +200,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\main.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -213,6 +215,9 @@
       <DependentUpon>MyStoreModel.edmx</DependentUpon>
       <LastGenOutput>MyStoreModel.cs</LastGenOutput>
     </Content>
+    <Content Include="picture\-e_o--Ella-High-Heel-DEMO-MP.jpg" />
+    <Content Include="picture\Dan.jpg" />
+    <Content Include="picture\tunic.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -245,6 +250,7 @@
     </Content>
     <Content Include="Areas\Admin\Views\Products\PVDelDetProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVListProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\CostumerLayout.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -270,6 +276,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\enter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,6 +13,11 @@ namespace _23DH114365_MyStore.Controllers
             return View();
         }
 
+        public ActionResult enter()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
