@@ -250,7 +250,8 @@
     </Content>
     <Content Include="Areas\Admin\Views\Products\PVDelDetProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVListProduct.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\CostumerLayout.cshtml" />
+    <Content Include="Views\Home\PVFeatureProduct.cshtml" />
+    <Content Include="Views\Home\PVNewProduct.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -276,7 +277,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\enter.cshtml" />
+    <Content Include="Views\Shared\Cos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
